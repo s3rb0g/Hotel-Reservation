@@ -1,0 +1,26 @@
+﻿@model HotelReservationSystem.Models.ReservationModel
+
+@{
+    ViewData["Title"] = "Reservation Successful";
+}
+
+<h1>Reservation Successful</h1>
+<p>Your reservation details have been saved successfully.</p>
+<p>Please screenshot or take a picture of this for verification purposes only.</p>
+<br />
+<div>
+    <h3>Reservation Details</h3>
+    <p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Contact Number:</strong> @Model.ContactNumber</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Address:</strong> @Model.Address</p>
+    <p><strong>Number of People:</strong> @Model.NumberOfPeople</p>
+    <p><strong>Check-In:</strong> @Model.CheckIn</p>
+    <p><strong>Check-Out:</strong> @Model.CheckOut</p>
+</div>
+
+<style>
+    body {
+        background-color: burlywood;
+    }
+</style>

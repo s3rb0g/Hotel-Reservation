@@ -1,0 +1,41 @@
+﻿@model HotelReservationSystem.Models.Reservation
+
+@{
+    ViewData["Title"] = "Update Record";
+}
+
+<h1>Update Record</h1>
+
+<form asp-action="UpdateRecord" method="post">
+    <input type="hidden" name="originalName" value="@Model.Name" />
+    <input type="hidden" name="originalCheckInDate" value="@Model.CheckIn.ToString("o")" />
+    <input type="hidden" name="originalCheckOutDate" value="@Model.CheckOut.ToString("o")" />
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CheckIn" class="control-label"></label>
+        <input asp-for="CheckIn" class="form-control" />
+        <span asp-validation-for="CheckIn" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CheckOut" class="control-label"></label>
+        <input asp-for="CheckOut" class="form-control" />
+        <span asp-validation-for="CheckOut" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Records">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,45 @@
+﻿@model HotelReservationSystem.Models.Reservation
+
+@{
+    ViewData["Title"] = "Appointment";
+}
+
+<h1>Appointment</h1> <br/>
+
+<form asp-action="SaveReservation" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" required />
+    </div><br />
+    <div class="form-group">
+        <label asp-for="ContactNumber"></label>
+        <input asp-for="ContactNumber" class="form-control" required />
+    </div><br />
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" required />
+    </div><br />
+    <div class="form-group">
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control" required />
+    </div><br />
+    <div class="form-group">
+        <label asp-for="NumberOfPeople"></label>
+        <input asp-for="NumberOfPeople" class="form-control" required />
+    </div><br />
+    <div class="form-group">
+        <label asp-for="CheckIn"></label>
+        <input asp-for="CheckIn" class="form-control" type="datetime-local" required />
+    </div><br />
+    <div class="form-group">
+        <label asp-for="CheckOut"></label>
+        <input asp-for="CheckOut" class="form-control" type="datetime-local" required />
+    </div><br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<style>
+    body {
+        background-color: burlywood;
+    }
+</style>
